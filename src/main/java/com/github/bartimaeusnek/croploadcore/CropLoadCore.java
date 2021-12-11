@@ -27,7 +27,8 @@ import org.apache.logging.log4j.Logger;
 
 @Mod(
         modid = CropLoadCore.MODID, name = CropLoadCore.MODNAME, version = CropLoadCore.VERSION,
-        dependencies = "after:Ztones;" +
+        dependencies = " required-after:witchery;" +
+                " after:Ztones;" +
                 " after:GalacticraftCore;" +
                 " after:GalacticraftPlanets;" +
                 " after:IC2;" +
@@ -37,7 +38,6 @@ import org.apache.logging.log4j.Logger;
                 " after:BiomesOPlenty;" +
                 " after:Thaumcraft;" +
                 " after:ExtraTrees;" +
-                " after:witchery;" +
                 " after:gregtech;" +
                 " after:dreamcraft;" +
                 " after:thaumicbases"
@@ -48,7 +48,7 @@ public class CropLoadCore {
 
     public static final String MODID = "croploadcore";
     public static final String MODNAME = "CropLoadCore";
-    public static final String VERSION = "@version@";
+    public static final String VERSION = "GRADLETOKEN_VERSION";
     public static final Logger CLClogger = LogManager.getLogger("CropLoadCore");
 
     @Instance(value = "CropLoadCore")
