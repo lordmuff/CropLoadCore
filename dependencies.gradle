@@ -1,0 +1,27 @@
+// Add your dependencies here
+
+dependencies {
+    compile("curse.maven:witchery-69673:2234410")
+
+    compileOnly("com.github.GTNewHorizons:Natura:master-SNAPSHOT:dev") {
+        transitive = false
+    }
+    compileOnly("com.github.GTNewHorizons:TinkersConstruct:master-SNAPSHOT:dev") {
+        transitive = false
+    }
+    compileOnly("com.github.GTNewHorizons:ThaumicBases:master-SNAPSHOT:dev") {
+        transitive = false
+    }
+
+    compileOnly("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev") {
+        transitive = false
+    }
+    compileOnly("curse.maven:biomes-o-plenty-220318:2499612") {
+        transitive = false
+    }
+    compileOnly("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev") {
+        transitive = false
+    }
+
+    runtime("com.github.GTNewHorizons:CodeChickenCore:master-SNAPSHOT:dev")  // Allow obfuscated Witchery to run in dev
+}

@@ -1,10 +1,10 @@
 [
 {
-  "modid": "croploadcore",
-  "name": "CropLoadCore",
+  "modid": "${modId}",
+  "name": "${modName}",
   "description": "Core Mod for LOKKO12's Mods.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "version": "${modVersion}",
+  "mcversion": "${minecraftVersion}",
   "url": "",
   "updateUrl": "",
   "authorList": ["bartimaeusnek"],
