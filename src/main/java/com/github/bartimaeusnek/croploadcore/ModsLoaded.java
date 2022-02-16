@@ -30,7 +30,7 @@ public class ModsLoaded {
             if (IC2)
                 CropLoadCore.CLClogger.info("IC2 found! " + name + " will now load!");
             else
-                CropLoadCore.CLClogger.error("IC2 NOT INSTALLED! WTF? YOU NEED IT FOR CROPS! POWAOFCAPLSLOCK!", Loader.isModLoaded("IC2"));
+                CropLoadCore.CLClogger.error("IC2 NOT INSTALLED! WTF? YOU NEED IT FOR CROPS! POWAOFCAPLSLOCK!");
             if (ModsLoaded.Natura)
                 CropLoadCore.CLClogger.info("Natura found! " + name + " will use their items!");
             else

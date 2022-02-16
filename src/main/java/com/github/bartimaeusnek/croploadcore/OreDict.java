@@ -1,6 +1,7 @@
 package com.github.bartimaeusnek.croploadcore;
 
 import com.github.bartimaeusnek.croploadcore.oredict.*;
+import cpw.mods.fml.common.Loader;
 import ic2.api.crops.CropCard;
 import ic2.api.crops.Crops;
 import net.minecraft.item.Item;
@@ -78,7 +79,7 @@ public class OreDict {
             new RegisterThaumcraft().register();
             new RegisterBoP().register();
             new RegisterNatura().register();
-            new RegisterWitchery().register();
+            if (Loader.isModLoaded("witchery")) new RegisterWitchery().register();
             new RegisterThaumicBases().register();
 
             if (!OreDictionary.getOres("cropBlackberry").isEmpty())

@@ -1,22 +1,6 @@
 package com.github.bartimaeusnek.croploadcore;
 
 
-import java.io.File;
-import java.security.cert.Certificate;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import org.apache.logging.log4j.LogManager;
-
-import com.github.bartimaeusnek.ASM.CropStickTransformer_plugin;
-
-import cpw.mods.fml.common.DummyModContainer;
-import cpw.mods.fml.common.LoadController;
-import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.MetadataCollection;
-import cpw.mods.fml.common.MetadataCollection.ArtifactVersionAdapter;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -27,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 @Mod(
         modid = CropLoadCore.MODID, name = CropLoadCore.MODNAME, version = CropLoadCore.VERSION,
-        dependencies = " required-after:witchery;" +
+        dependencies = " after:witchery;" +
                 " after:Ztones;" +
                 " after:GalacticraftCore;" +
                 " after:GalacticraftPlanets;" +
