@@ -45,9 +45,9 @@ public class CropStickTransformer implements IClassTransformer {
                             ClassNode classNode = new ClassNode();
 
                             reader.accept(classNode, 0);
-                            //get a list of methodes declared for this class
+                            //get a list of methods declared for this class
                             final List<MethodNode> methods = classNode.methods;
-                            //loop thou methodes until the method name equal the one defined above
+                            //loop thou methods until the method name equal the one defined above
                             for (MethodNode methodNode : methods) {
                                 if (methodNode.name.equals(name)) {
 
@@ -60,7 +60,7 @@ public class CropStickTransformer implements IClassTransformer {
 
                                     //invoke the static replacement method, static for convinience
                                     insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "com/github/bartimaeusnek/ASM/CropStickTransformerReplaceMethod", "patchedcanPlaceBlockAt", desc, false));
-                                    insnList.add(new InsnNode(Opcodes.IRETURN)); //return an integer from a method (its a boolean, which will be 1 or 0)
+                                    insnList.add(new InsnNode(Opcodes.IRETURN)); //return an integer from a method (it's a boolean, which will be 1 or 0)
                                     methodNode.instructions = insnList; //copy the new method into the methodNode
                                 }
                             }

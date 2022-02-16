@@ -1,25 +1,12 @@
 // Add your dependencies here
 
 dependencies {
-    compile("curse.maven:witchery-69673:2234410")
+    compileOnly('com.github.GTNewHorizons:Natura:2.4.9:dev') {transitive=false}
+    compileOnly('com.github.GTNewHorizons:TinkersConstruct:1.9.0.13-GTNH:dev') {transitive=false}
+    compileOnly('com.github.GTNewHorizons:ThaumicBases:1.4.28:dev') {transitive=false}
+    compileOnly('thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev') {transitive=false}
+    compileOnly('net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev') {transitive=false}
 
-    compileOnly("com.github.GTNewHorizons:Natura:2.4.9:dev") {
-        transitive = false
-    }
-    compileOnly("com.github.GTNewHorizons:TinkersConstruct:1.9.0.12-GTNH:dev") {
-        transitive = false
-    }
-    compileOnly("com.github.GTNewHorizons:ThaumicBases:master-SNAPSHOT:dev") {
-        transitive = false
-    }
-    compileOnly("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev") {
-        transitive = false
-    }
-    compileOnly(deobf("https://media.forgecdn.net/files/2499/612/BiomesOPlenty-1.7.10-2.1.0.2308-universal.jar"))
-    compileOnly("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev") {
-        transitive = false
-    }
-
-    runtime("com.github.GTNewHorizons:CodeChickenCore:1.1.3:dev")  // Allow obfuscated Witchery to run in dev
-    runtime("com.github.GTNewHorizons:CodeChickenLib:1.1.5.2:dev")
+    compileOnly(deobf('https://media.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar'))
+    compileOnly(deobf('https://media.forgecdn.net/files/2499/612/BiomesOPlenty-1.7.10-2.1.0.2308-universal.jar'))
 }
