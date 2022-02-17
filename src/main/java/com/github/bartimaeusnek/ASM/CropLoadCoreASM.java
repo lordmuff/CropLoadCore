@@ -19,15 +19,23 @@ public class CropLoadCoreASM extends DummyModContainer {
         ModMetadata metadata = getMetadata();
         metadata.modId = "CropLoadCoreASM";
         metadata.name = CropStickTransformer_plugin.NAME;
-        metadata.version = "0.0.1";
+        metadata.version = "0.0.2";
         metadata.authorList.add("bartimaeusnek");
+        metadata.parent = "berriespp";
+        metadata.dependencies = getDependencies();
         metadata.dependants = getDependants();
+    }
+
+    @Override
+    public List<ArtifactVersion> getDependencies() {
+        List<ArtifactVersion> ret = new ArrayList<ArtifactVersion>();
+        ret.add(new DefaultArtifactVersion("IC2", true));
+        return ret;
     }
 
     @Override
     public List<ArtifactVersion> getDependants() {
         List<ArtifactVersion> ret = new ArrayList<ArtifactVersion>();
-        ret.add(new DefaultArtifactVersion("IC2", true));
         ret.add(new DefaultArtifactVersion("berriespp", true));
         return ret;
     }

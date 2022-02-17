@@ -1,6 +1,5 @@
 package com.github.bartimaeusnek.ASM;
 
-
 import net.minecraft.launchwrapper.IClassTransformer;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
@@ -12,7 +11,7 @@ import java.util.List;
 
 public class CropStickTransformer implements IClassTransformer {
 
-    private final static String[] classesBeeingTransformed =
+    private final static String[] classesBeingTransformed =
             {
                     "ic2.core.crop.BlockCrop",
                     "ic2.core.item.tool.ItemWeedingTrowel"
@@ -21,7 +20,7 @@ public class CropStickTransformer implements IClassTransformer {
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
         boolean isObfuscated = name.equals(transformedName);
-        int index = Arrays.asList(classesBeeingTransformed).indexOf(transformedName);
+        int index = Arrays.asList(classesBeingTransformed).indexOf(transformedName);
         return index == 0 ? transform(index, 1, transform(index, 0, basicClass, isObfuscated), isObfuscated) : index != (-1) ? transform(index, 0, basicClass, isObfuscated) : basicClass;
     }
 
@@ -47,7 +46,7 @@ public class CropStickTransformer implements IClassTransformer {
                             reader.accept(classNode, 0);
                             //get a list of methods declared for this class
                             final List<MethodNode> methods = classNode.methods;
-                            //loop thou methods until the method name equal the one defined above
+                            //loop through methods until the method name equals the one defined above
                             for (MethodNode methodNode : methods) {
                                 if (methodNode.name.equals(name)) {
 
@@ -58,7 +57,7 @@ public class CropStickTransformer implements IClassTransformer {
                                     insnList.add(new VarInsnNode(Opcodes.ILOAD, 3));
                                     insnList.add(new VarInsnNode(Opcodes.ILOAD, 4));
 
-                                    //invoke the static replacement method, static for convinience
+                                    //invoke the static replacement method, static for convenience
                                     insnList.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "com/github/bartimaeusnek/ASM/CropStickTransformerReplaceMethod", "patchedcanPlaceBlockAt", desc, false));
                                     insnList.add(new InsnNode(Opcodes.IRETURN)); //return an integer from a method (it's a boolean, which will be 1 or 0)
                                     methodNode.instructions = insnList; //copy the new method into the methodNode
@@ -108,7 +107,9 @@ public class CropStickTransformer implements IClassTransformer {
                 case 1: {
                     CropLoadCoreASM.cppASMlogger.info("Patching WeedingTrowel to accept custom Weeds");
                     String name = "onItemUseFirst";
-                    String desc = !isObfuscated ? "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;IIIIFFF)Z" : "(Ladd;Lyz;Lahb;IIIIFFF)Z";
+                    //String desc = !isObfuscated ? "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;IIIIFFF)Z" : "(Ladd;Lyz;Lahb;IIIIFFF)Z";
+                    //This is forge and so never obfuscated?????
+                    String desc = "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;IIIIFFF)Z";
                     ClassReader reader = new ClassReader(basicClass);
                     ClassNode classNode = new ClassNode();
 
@@ -148,5 +149,5 @@ public class CropStickTransformer implements IClassTransformer {
         }
 
     }
-  
+
 }
