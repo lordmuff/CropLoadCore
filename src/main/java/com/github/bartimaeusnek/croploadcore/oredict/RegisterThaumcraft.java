@@ -1,8 +1,8 @@
 package com.github.bartimaeusnek.croploadcore.oredict;
 
-import net.minecraftforge.oredict.OreDictionary;
-
 import static thaumcraft.api.ItemApi.getBlock;
+
+import net.minecraftforge.oredict.OreDictionary;
 
 public class RegisterThaumcraft implements OreDictRegistrator {
 
@@ -10,6 +10,7 @@ public class RegisterThaumcraft implements OreDictRegistrator {
     public String getModWhichRegisters() {
         return "Thaumcraft";
     }
+
     @Override
     public void run() {
         OreDictionary.registerOre("cropShimmerleaf", getBlock("blockCustomPlant", 2));

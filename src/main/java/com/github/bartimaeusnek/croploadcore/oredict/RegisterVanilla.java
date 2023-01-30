@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class RegisterVanilla {
+
     public static void register() {
         OreDictionary.registerOre("cropVine", Item.getItemById(106));
         OreDictionary.registerOre("cropVines", Item.getItemById(106));

@@ -2,9 +2,11 @@ package com.github.bartimaeusnek.croploadcore.oredict;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
+
 import tb.init.TBItems;
 
 public class RegisterThaumicBases implements OreDictRegistrator {
+
     @Override
     public String getModWhichRegisters() {
         return "thaumicbases";
@@ -12,6 +14,6 @@ public class RegisterThaumicBases implements OreDictRegistrator {
 
     @Override
     public void run() {
-        OreDictionary.registerOre("nuggetThauminite", new ItemStack(TBItems.resource,1,0));
+        OreDictionary.registerOre("nuggetThauminite", new ItemStack(TBItems.resource, 1, 0));
     }
 }

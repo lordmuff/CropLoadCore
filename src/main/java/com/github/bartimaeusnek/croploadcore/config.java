@@ -1,11 +1,13 @@
 package com.github.bartimaeusnek.croploadcore;
 
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.common.config.Configuration;
-
 import java.io.File;
 
+import net.minecraftforge.common.config.Configuration;
+
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+
 public class config {
+
     public Configuration tConfig;
 
     public config(FMLPreInitializationEvent preinit, String cfgname) {

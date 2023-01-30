@@ -1,9 +1,10 @@
 package com.github.bartimaeusnek.croploadcore.oredict;
 
-import biomesoplenty.api.content.BOPCBlocks;
-import biomesoplenty.api.content.BOPCItems;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
+
+import biomesoplenty.api.content.BOPCBlocks;
+import biomesoplenty.api.content.BOPCItems;
 
 public class RegisterBoP implements OreDictRegistrator {
 

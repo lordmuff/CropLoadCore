@@ -7,8 +7,7 @@ public interface OreDictRegistrator extends Runnable {
     String getModWhichRegisters();
 
     default void register() {
-        if (Loader.isModLoaded(getModWhichRegisters()))
-            run();
+        if (Loader.isModLoaded(getModWhichRegisters())) run();
     }
 
 }

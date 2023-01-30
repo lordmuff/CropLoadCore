@@ -2,9 +2,11 @@ package com.github.bartimaeusnek.croploadcore.oredict;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
+
 import tconstruct.world.TinkerWorld;
 
 public class RegisterTinkersConstruct implements OreDictRegistrator {
+
     @Override
     public String getModWhichRegisters() {
         return "TConstruct";

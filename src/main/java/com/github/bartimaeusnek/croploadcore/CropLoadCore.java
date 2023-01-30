@@ -1,32 +1,31 @@
 package com.github.bartimaeusnek.croploadcore;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 @Mod(
-        modid = CropLoadCore.MODID, name = CropLoadCore.MODNAME, version = CropLoadCore.VERSION,
-        dependencies = " after:witchery;" +
-                " after:Ztones;" +
-                " after:GalacticraftCore;" +
-                " after:GalacticraftPlanets;" +
-                " after:IC2;" +
-                " after:Mantle;" +
-                " after:Natura;" +
-                " after:TConstruct;" +
-                " after:BiomesOPlenty;" +
-                " after:Thaumcraft;" +
-                " after:ExtraTrees;" +
-                " after:gregtech;" +
-                " after:dreamcraft;" +
-                " after:thaumicbases"
-)
-
+        modid = CropLoadCore.MODID,
+        name = CropLoadCore.MODNAME,
+        version = CropLoadCore.VERSION,
+        dependencies = " after:witchery;" + " after:Ztones;"
+                + " after:GalacticraftCore;"
+                + " after:GalacticraftPlanets;"
+                + " after:IC2;"
+                + " after:Mantle;"
+                + " after:Natura;"
+                + " after:TConstruct;"
+                + " after:BiomesOPlenty;"
+                + " after:Thaumcraft;"
+                + " after:ExtraTrees;"
+                + " after:gregtech;"
+                + " after:dreamcraft;"
+                + " after:thaumicbases")
 
 public class CropLoadCore {
 

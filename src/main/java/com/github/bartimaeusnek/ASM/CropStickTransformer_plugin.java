@@ -1,14 +1,14 @@
 package com.github.bartimaeusnek.ASM;
 
-import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
-import cpw.mods.fml.relauncher.IFMLLoadingPlugin.MCVersion;
-import cpw.mods.fml.relauncher.IFMLLoadingPlugin.TransformerExclusions;
-import cpw.mods.fml.relauncher.IFMLLoadingPlugin.Name;
-
 import java.util.Map;
 
+import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
+import cpw.mods.fml.relauncher.IFMLLoadingPlugin.MCVersion;
+import cpw.mods.fml.relauncher.IFMLLoadingPlugin.Name;
+import cpw.mods.fml.relauncher.IFMLLoadingPlugin.TransformerExclusions;
+
 @MCVersion("1.7.10")
-@TransformerExclusions({"com.github.bartimaeusnek.ASM"})
+@TransformerExclusions({ "com.github.bartimaeusnek.ASM" })
 @Name(CropStickTransformer_plugin.NAME)
 public class CropStickTransformer_plugin implements IFMLLoadingPlugin {
 
@@ -16,7 +16,7 @@ public class CropStickTransformer_plugin implements IFMLLoadingPlugin {
 
     @Override
     public String[] getASMTransformerClass() {
-        return new String[]{CropStickTransformer.class.getName()};
+        return new String[] { CropStickTransformer.class.getName() };
     }
 
     @Override
@@ -30,8 +30,7 @@ public class CropStickTransformer_plugin implements IFMLLoadingPlugin {
     }
 
     @Override
-    public void injectData(Map<String, Object> data) {
-    }
+    public void injectData(Map<String, Object> data) {}
 
     @Override
     public String getAccessTransformerClass() {
